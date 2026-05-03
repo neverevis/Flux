@@ -15,5 +15,4 @@ O Flux é um app simples onde você pode postar fotos, escrever uma descrição 
 
 ## Demonstração (Vídeo)
 
-Assista à demonstração do aplicativo funcionando no YouTube:
-[https://www.youtube.com/watch?v=K2kRlV4ec-k](https://www.youtube.com/watch?v=K2kRlV4ec-k)
+[![Demonstração do Flux](https://img.youtube.com/vi/K2kRlV4ec-k/0.jpg)](https://www.youtube.com/watch?v=K2kRlV4ec-k)
