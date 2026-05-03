@@ -14,3 +14,6 @@ O Flux é um app simples onde você pode postar fotos, escrever uma descrição 
 - **Localização:** Quando você vai criar um post, o app puxa sua localização via GPS e descobre o nome da cidade.
 
 ## Demonstração (Vídeo)
+
+Assista à demonstração do aplicativo funcionando no YouTube:
+[https://www.youtube.com/watch?v=K2kRlV4ec-k](https://www.youtube.com/watch?v=K2kRlV4ec-k)
