@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <!-- Seção de Perfil no Topo -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Username"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/imgLogo"
+        app:layout_constraintStart_toEndOf="@+id/imgLogo" />
+
+    <TextView
+        android:id="@+id/txtNomeCompleto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Nome Completo"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/txtUsername"
+        app:layout_constraintStart_toEndOf="@+id/imgLogo" />
+
+    <LinearLayout
+        android:id="@+id/layoutBotoes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeCompleto"
+        app:layout_constraintStart_toStartOf="@+id/txtNomeCompleto"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnNovaPostagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="Novo Post"
+            android:textSize="12sp"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btnEditarPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="Perfil"
+            android:textSize="12sp"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btnSair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sair"
+            android:textSize="12sp"
+            android:padding="8dp"
+            android:backgroundTint="#FF4444" />
+    </LinearLayout>
+
+    <!-- Divisor Visual -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#DDDDDD"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+    <!-- Busca por Cidade -->
+    <EditText
+        android:id="@+id/editBuscaCidade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Buscar por cidade..."
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnBuscarCidade" />
+
+    <Button
+        android:id="@+id/btnBuscarCidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Buscar"
+        app:layout_constraintTop_toTopOf="@+id/editBuscaCidade"
+        app:layout_constraintBottom_toBottomOf="@+id/editBuscaCidade"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- RecyclerView do Feed -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFeed"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/editBuscaCidade"
+        app:layout_constraintBottom_toTopOf="@+id/btnCarregarMais"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnCarregarMais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Carregar mais posts..."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
